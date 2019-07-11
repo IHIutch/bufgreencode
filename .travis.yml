@@ -30,6 +30,7 @@ jobs:
 #    - bundle exec scss-lint _assets/styles/scss/*.scss
     - bundle exec htmlproofer ./_site
   - stage: Deploy
+    if: branch = master
     script:
     - npm i gulp
     - gulp build
