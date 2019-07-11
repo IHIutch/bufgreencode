@@ -27,13 +27,7 @@ gulp.task("build:styles:main", function() {
         outputStyle: "compressed"
       }).on("error", sass.logError)
     )
-    .pipe(
-      postcss([
-        autoprefixer({
-          browsers: ["last 2 versions"]
-        })
-      ])
-    )
+    .pipe(postcss([autoprefixer()]))
     .pipe(cleancss())
     .pipe(gulp.dest(paths.jekyllCssFiles))
     .pipe(gulp.dest(paths.siteCssFiles))

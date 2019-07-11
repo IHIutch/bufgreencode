@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ],
   "dependencies": {
     "anchor-js": "^4.2.0",
     "autoprefixer": "^9.6.1",
